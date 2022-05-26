@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  width: 1024px;
+  width: 940px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,12 +26,26 @@ body {
 }
 
 body .title {
-  margin-left: 42px;
-  margin-right: 42px;
+  height: 40px;
+  margin: 30px 0px 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .title .logo a {
+  margin: 0;
+}
+
+body .title .logo a img {
+  height: 40px;
+  background-size: contain;
 }
 
 body .title nav {
-  width: 940px;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,12 +53,6 @@ body .title nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-
-body .title nav .logo {
-  background-size: contain;
 }
 
 body .title nav .menu {
@@ -87,12 +95,12 @@ body .title nav .menu ul .cart {
   margin-right: 0;
 }
 
-body .title .banner img {
+body .banner img {
   width: 940px;
   height: 496px;
 }
 
-body .title .banner img:hover {
+body .banner img:hover {
   border: #44b4ff 1px solid;
 }
 
@@ -105,12 +113,21 @@ body .container {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 60px;
-  margin-left: 42px;
-  margin-right: 42px;
 }
 
-body .container .d_menu {
-  margin-right: 20px;
+body .container .d_menu .d_menu_title {
+  background: #3f5d45;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  height: 65px;
+  width: 300px;
+  padding: 16px 102px 16px 102px;
+  line-height: 40px;
+}
+
+body .container .d_menu .d_menu_title p {
+  margin: 0;
 }
 
 body .container .d_menu ul {
@@ -123,14 +140,10 @@ body .container .d_menu ul {
 body .container .d_menu ul li {
   height: 65px;
   width: 300px;
-  color: #3f5d45;
   font-size: 24px;
   font-weight: bold;
   border: #eaf0ed solid 1px;
-}
-
-body .container .d_menu ul li p {
-  margin: 0 auto;
+  line-height: 40px;
   padding: 16px 64px 16px 64px;
 }
 
@@ -138,9 +151,9 @@ body .container .d_menu ul li:hover {
   border: #44b4ff 1px solid;
 }
 
-body .container .d_menu ul .d_menu_title {
-  background: #3f5d45;
-  color: white;
+body .container .d_menu ul li a {
+  color: #3f5d45;
+  text-decoration: none;
 }
 
 body .container .d_menu ul .select {
@@ -153,8 +166,16 @@ body .container .d_img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 620px;
-  height: 1342px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+body .container .d_img .item {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 body .container .d_img .item .food {
@@ -163,16 +184,19 @@ body .container .d_img .item .food {
   height: 315px;
 }
 
-body .container .d_img .item .food :hover {
+body .container .d_img .item .food img:hover {
   border: #44b4ff 1px solid;
 }
 
 body .container .d_img .item .food .osusume {
-  width: 36px;
-  height: 107px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  margin: 0 auto;
+  font-size: 16px;
+  letter-spacing: 5px;
+  font-weight: bold;
   padding: 10.08px 10px 9.24px 10px;
-  padding-right: 10px;
-  padding-left: 10px;
   background-color: #3f5d45;
   color: #eaf0ed;
   position: absolute;
@@ -204,6 +228,8 @@ body .container .d_img .item .txt {
 }
 
 body .container .d_img .item .txt .foodname {
+  margin: 0;
+  font-size: 20px;
   border: #eaf0ed solid 1px;
   width: 100%;
   display: -webkit-box;
@@ -218,6 +244,7 @@ body .container .d_img .item .txt .foodname {
 }
 
 body .container .d_img .item .txt .price {
+  margin: 0;
   border: #eaf0ed solid 1px;
   width: 127px;
   height: 56px;
@@ -236,6 +263,7 @@ body .container .d_img .item .txt .price {
 
 body .container .d_img .item .addcart {
   background-color: #eaf0ed;
+  border: 0;
   color: #3f5d45;
   width: 300px;
   height: 65px;
@@ -258,12 +286,8 @@ body .container .d_img .item .addcart:hover {
   border: #44b4ff 1px solid;
 }
 
-body .container .d_img .mr20 {
-  margin-right: 20px;
-}
-
 body .page {
-  margin-top: 30px;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,8 +298,6 @@ body .page {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  margin-left: 42px;
-  margin-right: 42px;
 }
 
 body .page .num {

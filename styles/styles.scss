@@ -9,22 +9,27 @@ html {
 }
 
 body {
-  width: 1024px;
+  width: 940px;
   display: flex;
   flex-direction: column;
   .title {
-    margin-left: 42px;
-    margin-right: 42px;
+    height: 40px;
+    margin: 30px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      a {
+        margin: 0;
+        img {
+          height: 40px;
+          background-size: contain;
+        }
+      }
+    }
     nav {
-      width: 940px;
       height: 40px;
       display: flex;
       justify-content: space-between;
-      margin-top: 40px;
-      margin-bottom: 30px;
-      .logo {
-        background-size: contain;
-      }
       .menu {
         display: flex;
         align-items: center;
@@ -55,24 +60,34 @@ body {
         }
       }
     }
-    .banner {
-      img {
-        width: 940px;
-        height: 496px;
-      }
-      img:hover {
-        border: #44b4ff 1px solid;
-      }
+  }
+  .banner {
+    img {
+      width: 940px;
+      height: 496px;
+    }
+    img:hover {
+      border: #44b4ff 1px solid;
     }
   }
   .container {
     display: flex;
     flex-direction: row;
     margin-top: 60px;
-    margin-left: 42px;
-    margin-right: 42px;
     .d_menu {
-      margin-right: 20px;
+      .d_menu_title {
+        background: #3f5d45;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        height: 65px;
+        width: 300px;
+        padding: 16px 102px 16px 102px;
+        line-height: 40px;
+        p {
+          margin: 0;
+        }
+      }
       ul {
         list-style: none;
         text-align: center;
@@ -81,22 +96,20 @@ body {
         li {
           height: 65px;
           width: 300px;
-          color: #3f5d45;
           font-size: 24px;
           font-weight: bold;
           border: #eaf0ed solid 1px;
-          p {
-            margin: 0 auto;
-            padding: 16px 64px 16px 64px;
+          line-height: 40px;
+          padding: 16px 64px 16px 64px;
+          &:hover {
+            border: #44b4ff 1px solid;
+          }
+          a {
+            color: #3f5d45;
+            text-decoration: none;
           }
         }
-        li:hover {
-          border: #44b4ff 1px solid;
-        }
-        .d_menu_title {
-          background: #3f5d45;
-          color: white;
-        }
+
         .select {
           background-color: #eaf0ed;
         }
@@ -105,22 +118,31 @@ body {
     .d_img {
       display: flex;
       flex-wrap: wrap;
-      width: 620px;
-      height: 1342px;
+
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
       .item {
+        margin-left: 20px;
+        margin-bottom: 20px;
         .food {
           position: relative;
           width: 300px;
           height: 315px;
-          :hover {
-            border: #44b4ff 1px solid;
+          img {
+            &:hover {
+              border: #44b4ff 1px solid;
+            }
           }
           .osusume {
-            width: 36px;
-            height: 107px;
+            writing-mode: vertical-lr;
+            margin: 0 auto;
+            font-size: 16px;
+            letter-spacing: 5px;
+            font-weight: bold;
             padding: 10.08px 10px 9.24px 10px;
-            padding-right: 10px;
-            padding-left: 10px;
             background-color: #3f5d45;
             color: #eaf0ed;
             position: absolute;
@@ -144,6 +166,8 @@ body {
           width: 300px;
           height: 56px;
           .foodname {
+            margin: 0;
+            font-size: 20px;
             border: #eaf0ed solid 1px;
             width: 100%;
             display: flex;
@@ -151,6 +175,7 @@ body {
             justify-content: center;
           }
           .price {
+            margin: 0;
             border: #eaf0ed solid 1px;
             width: 127px;
             height: 56px;
@@ -163,6 +188,7 @@ body {
         }
         .addcart {
           background-color: #eaf0ed;
+          border: 0;
           color: #3f5d45;
           width: 300px;
           height: 65px;
@@ -173,23 +199,18 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
+          &:hover {
+            border: #44b4ff 1px solid;
+          }
         }
-        .addcart:hover {
-          border: #44b4ff 1px solid;
-        }
-      }
-      .mr20 {
-        margin-right: 20px;
       }
     }
   }
   .page {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    margin-left: 42px;
-    margin-right: 42px;
     .num {
       line-height: 20px;
       font-size: 20px;
